@@ -14,14 +14,24 @@ if i <=100:
     print(sum)
             
 #3
-num_1 = input("정수를 입력하세요: ")
-want = list(map(int, num_1.split()))
-list.sort(want)
-for i in range(0,len(want), 2):
-    want[i] = str(want[i])
-print(want)
+want = []
+n = int(input("숫자를 몇 개 입력하시겠습니까? "))
+for i in range(n):
+    num = int(input("숫자를 입력하세요: "))
+    want.append(num)
 
+for i in range(len(want)):
+    if (i+1) % 2 == 1:
+        want[i] = str(want[i])
 #4
+for i in want:
+    if type(i) == int:
+        want.remove(i)
+
+want = [int(i) for i in want] 
+want.sort()
+
+print(want) 
 
 #5
 fruitdb = [['사과', 1020], ['오렌지', 880], ['포도', 3160]]
