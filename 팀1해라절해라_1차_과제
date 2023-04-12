@@ -85,7 +85,7 @@ for i in range(M, N + 1):
             elif j == i - 1:
                 arr.append(i)
 if len(arr) == 0:
-    print("소수를 찾을 수 ")
+    print("소수를 찾을 수 다없습니다 ")
 else:
     print(sum(arr))
     print(min(arr))
