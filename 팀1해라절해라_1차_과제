@@ -5,6 +5,36 @@ a[2]= 0
 a[3]= 0
 print(a)
 
+#2
+def sum_until_i(i):
+    sum = 0
+    for num in range(i+1):
+        sum += num
+        if num == i:
+            return (num, sum)
+            
+#3
+num_1 = input("정수를 입력하세요: ")
+want = list(map(int, num_1.split()))
+list.sort(want)
+for i in range(0,len(want), 2):
+    want[i] = str(want[i])
+print(want)
+
+#4
+
+#5
+fruitdb = [['사과', 1020], ['오렌지', 880], ['포도', 3160]]
+print(fruitdb[2])
+print(fruitdb[0][0])
+
+#6
+
+i = int(input("멈춘 시점을 입력하세요: "))
+result = sum_until_i(i)
+print("멈춘 시점: ", result[0])
+print("더한 값: ", result[1])
+
 # R
 #1
 x <- c(4,6,5,7,10,9,4,15)
