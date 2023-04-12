@@ -6,12 +6,7 @@ a[3]= 0
 print(a)
 
 #2
-def sum_until_i(i):
-    sum = 0
-    for num in range(i+1):
-        sum += num
-        if num == i:
-            return (num, sum)
+
             
 #3
 num_1 = input("정수를 입력하세요: ")
@@ -29,6 +24,57 @@ print(fruitdb[2])
 print(fruitdb[0][0])
 
 #6
+fruits = {'사과', '오렌지', '포도'}
+print('사과' in fruits)
+print('메론' in fruits)
+
+#7
+def fruit_counts():
+    training_data = [['연두', 3, '사과'], ['노랑', 3, '사과'], ['빨강', 2, '포도'], ['빨강', 1, '포도'], ['노랑', 3, '레몬']]
+    result_dict = {}
+    for data in training_data:
+        fruit = data[-1]
+        if fruit in result_dict:
+            result_dict[fruit] += 1
+        else:
+            result_dict[fruit] = 1
+    return result_dict
+print(fruit_counts())
+
+#8
+def solution(str1, str2):
+    if str2 in str1:
+        return 1
+    else:
+        return 2
+
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+result = solution(str1, str2)
+print(result)
+
+#9
+def solution(n):
+    divisors=[]
+    for i in range(1,n+1):
+        if n % i == 0:
+            divisors.append(i)
+    return divisors
+n=int(input("정수를 입력하세요:"))
+answer=solution(n)
+print(f"{n}의 약수:{answer}")
+
+#10
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+m, n=map(int,input().split())
+primes=[i for i in range(m,n+1) if is_prime(i)]
+print(sum(primes), min(primes))
 
 i = int(input("멈춘 시점을 입력하세요: "))
 result = sum_until_i(i)
