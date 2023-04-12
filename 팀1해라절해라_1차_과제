@@ -6,7 +6,12 @@ a[3]= 0
 print(a)
 
 #2
-
+i=int(input())
+sum=0
+if i <=100:
+    for a in range(i+1):
+        sum=sum+a
+    print(sum)
             
 #3
 num_1 = input("정수를 입력하세요: ")
@@ -26,7 +31,7 @@ print(fruitdb[0][0])
 #6
 fruits = {'사과', '오렌지', '포도'}
 print('사과' in fruits)
-print('메론' in fruits)
+print('멜멜론' in fruits)
 
 #7
 def fruit_counts():
@@ -48,8 +53,8 @@ def solution(str1, str2):
     else:
         return 2
 
-str1 = input("Enter the first string: ")
-str2 = input("Enter the second string: ")
+str1 = input("first string: ")
+str2 = input("second string: ")
 result = solution(str1, str2)
 print(result)
 
